@@ -1,0 +1,30 @@
+<p>directives works!</p>
+
+<h2 *ngIf="isAvailable; else elblock">This is ngIf</h2>
+<ng-template #elblock><h2>This is else</h2></ng-template>
+
+<div *ngIf="isAvailable; then ifblock; else elseblock">
+</div>
+
+<ng-template #ifblock>
+    <h2>if block</h2>
+</ng-template>
+
+<ng-template #elseblock>
+    <h2>else block</h2>
+</ng-template>
+
+<div [ngSwitch]="color">
+    <h2 *ngSwitchCase="'Blue'">Blue</h2>
+    <h2 *ngSwitchCase="'Green'">Green</h2>
+    <h2 *ngSwitchCase="'Red'">Red</h2>
+    <h2 *ngSwitchDefault>Default</h2>
+</div>
+
+<!-- <h2>Aniket</h2>
+<h2>Divyesh</h2>
+<h2>Hardik</h2> -->
+
+<div *ngFor="let student of students; even as i">
+    <h2>{{i}} {{student}}</h2>
+</div>
